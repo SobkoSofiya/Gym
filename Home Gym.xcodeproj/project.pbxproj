@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,14 @@
 		C37998C3259B26DF00E08AC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37998C2259B26DF00E08AC7 /* Assets.xcassets */; };
 		C37998C6259B26DF00E08AC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37998C5259B26DF00E08AC7 /* Preview Assets.xcassets */; };
 		C37998C9259B26DF00E08AC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37998C7259B26DF00E08AC7 /* LaunchScreen.storyboard */; };
+		C37998DA259B272300E08AC7 /* GymView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37998D9259B272300E08AC7 /* GymView.swift */; };
+		C37998DD259B2FFC00E08AC7 /* GymViewSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37998DC259B2FFC00E08AC7 /* GymViewSignIn.swift */; };
+		C37998E4259B326600E08AC7 /* BackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37998E3259B326600E08AC7 /* BackView.swift */; };
+		C37998E7259B32E100E08AC7 /* Swift2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37998E6259B32E100E08AC7 /* Swift2.swift */; };
+		C37998EA259B389800E08AC7 /* GymModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37998E9259B389800E08AC7 /* GymModel.swift */; };
+		C37998ED259B38B400E08AC7 /* GymViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37998EC259B38B400E08AC7 /* GymViewModel.swift */; };
+		C37998F1259B38E800E08AC7 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C37998F0259B38E800E08AC7 /* SwiftyJSON */; };
+		C37998F5259B390F00E08AC7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C37998F4259B390F00E08AC7 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,12 @@
 		C37998C5259B26DF00E08AC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C37998C8259B26DF00E08AC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C37998CA259B26DF00E08AC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C37998D9259B272300E08AC7 /* GymView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymView.swift; sourceTree = "<group>"; };
+		C37998DC259B2FFC00E08AC7 /* GymViewSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymViewSignIn.swift; sourceTree = "<group>"; };
+		C37998E3259B326600E08AC7 /* BackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackView.swift; sourceTree = "<group>"; };
+		C37998E6259B32E100E08AC7 /* Swift2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift2.swift; sourceTree = "<group>"; };
+		C37998E9259B389800E08AC7 /* GymModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymModel.swift; sourceTree = "<group>"; };
+		C37998EC259B38B400E08AC7 /* GymViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C37998F1259B38E800E08AC7 /* SwiftyJSON in Frameworks */,
+				C37998F5259B390F00E08AC7 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +75,12 @@
 				C37998BC259B26DC00E08AC7 /* AppDelegate.swift */,
 				C37998BE259B26DC00E08AC7 /* SceneDelegate.swift */,
 				C37998C0259B26DC00E08AC7 /* ContentView.swift */,
+				C37998E6259B32E100E08AC7 /* Swift2.swift */,
+				C37998E9259B389800E08AC7 /* GymModel.swift */,
+				C37998EC259B38B400E08AC7 /* GymViewModel.swift */,
+				C37998D9259B272300E08AC7 /* GymView.swift */,
+				C37998DC259B2FFC00E08AC7 /* GymViewSignIn.swift */,
+				C37998E3259B326600E08AC7 /* BackView.swift */,
 				C37998C2259B26DF00E08AC7 /* Assets.xcassets */,
 				C37998C7259B26DF00E08AC7 /* LaunchScreen.storyboard */,
 				C37998CA259B26DF00E08AC7 /* Info.plist */,
@@ -91,6 +113,10 @@
 			dependencies = (
 			);
 			name = "Home Gym";
+			packageProductDependencies = (
+				C37998F0259B38E800E08AC7 /* SwiftyJSON */,
+				C37998F4259B390F00E08AC7 /* Alamofire */,
+			);
 			productName = "Home Gym";
 			productReference = C37998B9259B26DC00E08AC7 /* Home Gym.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +144,10 @@
 				Base,
 			);
 			mainGroup = C37998B0259B26DC00E08AC7;
+			packageReferences = (
+				C37998EF259B38E800E08AC7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				C37998F3259B390F00E08AC7 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = C37998BA259B26DC00E08AC7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,9 +175,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C37998DA259B272300E08AC7 /* GymView.swift in Sources */,
 				C37998BD259B26DC00E08AC7 /* AppDelegate.swift in Sources */,
 				C37998BF259B26DC00E08AC7 /* SceneDelegate.swift in Sources */,
+				C37998E4259B326600E08AC7 /* BackView.swift in Sources */,
+				C37998E7259B32E100E08AC7 /* Swift2.swift in Sources */,
+				C37998DD259B2FFC00E08AC7 /* GymViewSignIn.swift in Sources */,
 				C37998C1259B26DC00E08AC7 /* ContentView.swift in Sources */,
+				C37998ED259B38B400E08AC7 /* GymViewModel.swift in Sources */,
+				C37998EA259B389800E08AC7 /* GymModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +379,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C37998EF259B38E800E08AC7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		C37998F3259B390F00E08AC7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C37998F0259B38E800E08AC7 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C37998EF259B38E800E08AC7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		C37998F4259B390F00E08AC7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C37998F3259B390F00E08AC7 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C37998B1259B26DC00E08AC7 /* Project object */;
 }
