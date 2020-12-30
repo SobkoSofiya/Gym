@@ -43,7 +43,9 @@ class GimViewModel:ObservableObject{
                 if json["notice"]["token"].stringValue != "" {
                     perehod = 3
                 } else if json["notice"]["answer"].stringValue == "User is active" {
-                    
+                    perehod = 2
+                } else if json["notice"]["answer"].stringValue == "Error username or password"{
+                    perehod = 1
                 }
                 print("JSON: \(json)")
             case .failure(let error):
@@ -52,16 +54,15 @@ class GimViewModel:ObservableObject{
         }
     }
     
-    func signOut (username:String, password:String, email:String){
+    func signOut (username:String){
         
-        let url = "http://gym.areas.su/signup?username=\(username)&email=\(password)&password=\(email)&weight=40&height=170"
+        let url = "http://gym.areas.su/signout?username=\(username)"
         
-        AF.request(url, method: .post).validate().responseJSON {[self] response in
+        AF.request(url, method: .post).validate().responseJSON { [self] response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
                 print("JSON: \(json)")
-                self.gym.append(GimModel(username: "\(username)", email: "\(email)", password: "\(password)", weight: "40", height: "170"))
                 
             case .failure(let error):
                 print(error)

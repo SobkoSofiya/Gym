@@ -50,7 +50,7 @@ struct GymView: View {
                         .opacity(5)
                     TextField("Ivanov", text: $nam)
                         .font(.custom("ND Astroneer", size: 24))
-                        .foregroundColor(.gray)
+                        .foregroundColor(Color("gray1"))
                         .padding(.trailing, 185)
                         .padding(.leading,5)
                         
@@ -71,11 +71,11 @@ struct GymView: View {
                     Rectangle()
                         .frame(width: 0.5 , height: 50, alignment: .center)
                         .opacity(5)
-                    TextField("Ivanov@mail.com", text: $emali)
-                        .font(.custom("ND Astroneer", size: 24))
-                        .foregroundColor(.gray)
-                        .padding(.trailing, 68)
-                        .padding(.leading,5)
+                    TextField("Ivanov", text: $emali)
+                                .font(.custom("ND Astroneer", size: 24))
+                                .foregroundColor(Color("gray1"))
+                                .padding(.trailing, 185)
+                                .padding(.leading,5)
                 }
                 
             }
@@ -93,10 +93,11 @@ struct GymView: View {
                     Rectangle()
                         .frame(width: 0.5 , height: 50, alignment: .center)
                         .opacity(5)
-                    TextField("\(Image("q"))", text: $pass)
-                        
-                        .padding(.trailing, 186)
-                        .padding(.leading,15)
+                    TextField("●●●●●●", text: $pass)
+                        .font(.custom("ND Astroneer", size: 17))
+                        .foregroundColor(Color("gray2"))
+                        .padding(.trailing, 68)
+                        .padding(.leading,13)
                         
                 }
                 
@@ -115,10 +116,11 @@ struct GymView: View {
                                 Rectangle()
                                     .frame(width: 0.5 , height: 50, alignment: .center)
                                     .opacity(5)
-                                TextField("\(Image("q"))", text: $rePass)
-                                    
-                                    .padding(.trailing, 186)
-                                    .padding(.leading,15)
+                                TextField("●●●●●●", text: $rePass)
+                                    .font(.custom("ND Astroneer", size: 17))
+                                    .foregroundColor(Color("gray2"))
+                                    .padding(.trailing, 68)
+                                    .padding(.leading,13)
                                     
                             }
                             

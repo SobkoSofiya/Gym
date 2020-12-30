@@ -9,9 +9,12 @@ import SwiftUI
 
 struct GymViewSignIn: View {
     @ObservedObject var gimVeiwModel = GimViewModel()
-    @State var nam:String = ""
+    @Binding var nam:String
     @State var pass:String = ""
     @Binding var Swift22:Int
+    @State var alertError = false
+    @State var mess: String = ""
+    @State var mess1:String = ""
     var body: some View {
         ZStack{
             Rectangle()
@@ -46,7 +49,7 @@ struct GymViewSignIn: View {
                                     .opacity(5)
                                 TextField("Ivanov", text: $nam)
                                     .font(.custom("ND Astroneer", size: 24))
-                                    .foregroundColor(.gray)
+                                    .foregroundColor(Color("gray1"))
                                     .padding(.trailing, 185)
                                     .padding(.leading,5)
                                     
@@ -69,10 +72,11 @@ struct GymViewSignIn: View {
                                 Rectangle()
                                     .frame(width: 0.5 , height: 50, alignment: .center)
                                     .opacity(5)
-                                TextField("\(Image("q"))", text: $pass)
-                                    
-                                    .padding(.trailing, 186)
-                                    .padding(.leading,15)
+                                TextField("●●●●●●", text: $pass)
+                                    .font(.custom("ND Astroneer", size: 17))
+                                    .foregroundColor(Color("gray2"))
+                                    .padding(.trailing, 68)
+                                    .padding(.leading,13)
                                     
                             }
                             
@@ -84,7 +88,24 @@ struct GymViewSignIn: View {
                             Button(action: {
                                 gimVeiwModel.signIn(username: String("\(nam)"), password: String("\(pass)"))
                                 if   gimVeiwModel.perehod == 3 {
-                                    Swift22 = 3
+                                    mess = "You are logged in to\(nam) account"
+                                    alertError.toggle()
+                                    
+                                   
+                                } else if gimVeiwModel.perehod == 2{
+                                    mess = "User is active"
+                                    alertError.toggle()
+                                   
+                                } else if gimVeiwModel.perehod == 1{
+                                    if nam != "" && pass != ""{
+                                        mess = "Error username or password"
+                                        alertError.toggle()
+                                       
+                                    } else {
+                                        mess = "Enter all fields"
+                                        alertError.toggle()
+                                    }
+                                    
                                 }
                                 
                             }, label: {
@@ -93,7 +114,22 @@ struct GymViewSignIn: View {
                                     .foregroundColor(Color("bu"))
                                     .frame(width: 312, height: 50, alignment: .center)
                                     .background(Color.white)
+                            }).alert(isPresented: $alertError, content: {
+                                Alert(title: Text("Attention"), message: Text("\(mess)"),dismissButton: .default((Text("OK")), action: {
+                                    if mess == "You are logged in to\(nam) account"{
+                                    Swift22 = 3
+                                    }
+                                    else if mess == "User is active"{
+                                        Swift22 = 3
+                                    }
+                                    else  {
+                                        Swift22 = 1
+                                    }
+                                    
+                                }))
+                                
                             })
+                            
            
                             Button(action: {
                                 Swift22=2
